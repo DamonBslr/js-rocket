@@ -16,7 +16,7 @@ var car = {
 
 		fly: function () {
 			alert("fly");
-		}
+		},
 
 		switchCar: function (isOn) {
 			console.log("turn car"+isOn);
