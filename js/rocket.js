@@ -21,7 +21,7 @@ if (countdownNumber <= 0) {
 
 			console.log('randomNumber:',randomNumber)
 
-			if (randomNumber > 5) {
+			if (randomNumber > 3) {
 				changeState(4);
 			} else
 				changeState(5);
