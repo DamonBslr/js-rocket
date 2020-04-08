@@ -1,3 +1,4 @@
+//variables
 var timer = null;
 var countdownNumber = 10;
 
@@ -7,6 +8,8 @@ var changeState = function (state) {
 		countdownNumber = 10;
 		document.getElementById('countdown').innerHTML = countdownNumber;
 
+//if clauses
+
 //countdown
 if (state == 2) {
 		timer = setInterval(function(){
@@ -15,18 +18,20 @@ if (state == 2) {
 //cant wait!
 if (countdownNumber > 1 && countdownNumber <= 4) {
 	document.getElementById('cant-wait').className = 'cant-wait show'
-	} else{
+	} 
+     else{
 	document.getElementById('cant-wait').className = 'cant-wait'
-}
+     }
 
 //I'm nervous!
 if (countdownNumber > 4 && countdownNumber <= 7) {
 	document.getElementById('nervous').className = 'nervous show'
-} else{
+     } 
+     else{
 	document.getElementById('nervous').className = 'nervous'
-}
+     }
 
-//
+// random picker
 if (countdownNumber <= 0) {
 	changeState(3);
 			}
@@ -37,12 +42,10 @@ if (countdownNumber <= 0) {
 
 			console.log('randomNumber:',randomNumber)
 
-// success
-if (randomNumber > 3){
-	changeState(4);} 
+// success?
+if (randomNumber > 3){changeState(4);} 
 else
 	changeState(5);
 
 		}, 2000);
-	}
-};
+	}}
